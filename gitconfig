@@ -1,3 +1,8 @@
+[user]
+	email = lzenone@kpler.com
+	name = Lino Zenone
+
+
 [color]
   branch = auto
   diff = auto
@@ -15,7 +20,7 @@
 
 [alias]
   co = checkout
-  st = status -sb
+  st = status 
   br = branch
   ci = commit
   fo = fetch origin
@@ -51,14 +56,14 @@
 [push]
   default = simple
 
-[branch "master"]
+[branch "main"]
   mergeoptions = --no-edit
 
 [pull]
   rebase = false
 
 [init]
-  defaultBranch = master
+  defaultBranch = main
 [user]
 	email = lzenone@kpler.com
 	name = Lino Zenone
