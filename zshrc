@@ -147,11 +147,16 @@ ZSH_THEME="dst"
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src # zsh-completion plugin has to be installed manually for performance purpose
 plugins=(git gitfast last-working-dir common-aliases history-substring-search z zsh-autosuggestions direnv) # poetry
 
+
 # Start the ssh-agent in the background
 # eval "$(ssh-agent -s)"
 
-# (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
-export HOMEBREW_NO_ANALYTICS=1
+
+# Useful oh-my-zsh plugins and autocompletions
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src # zsh-completion plugin has to be installed manually for performance purpose
+plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search z zsh-autosuggestions direnv poetry)
+
+
 
 # Disable warning about insecure completion-dependent directories
 ZSH_DISABLE_COMPFIX=true
@@ -189,12 +194,33 @@ export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv version-name)]'
 
+export BUNDLER_EDITOR=code  # TODO: change with pycharm
+export EDITOR=code
 # PYTHON PATHS (bad practice, keep this tidy)
 export PYTHONPATH=/home/lino/power-workflow/:$PYTHONPATH
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
 
+
+# PyEnv Stuff
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+# Pyenv setup
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+  eval "$(pyenv init --path)"
+fi
+  
+# CHANGE BY DEFAULT AUTO COMPLETION KEY
+bindkey '²' autosuggest-accept
+
+
+
+=======
 # Tensorflow: 0 = all messages are logged (default behavior), 1 = INFO messages are not printed, 2 = INFO and WARNING messages are not printed, 3 = INFO, WARNING, and ERROR messages are not printed
 export TF_CPP_MIN_LOG_LEVEL=2
 

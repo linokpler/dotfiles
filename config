@@ -1,4 +1,12 @@
-Host *
-  UseKeychain yes
-  AddKeysToAgent yes
-  IdentityFile ~/.ssh/id_ed25519
+Host *.cor-e.fr
+        AddKeysToAgent yes
+        ForwardAgent yes
+        IdentityFile ~/.ssh/id_rsa_core
+Host *.galil.io
+        User Kpler
+        ForwardAgent yes
+        IdentityFile ~/.ssh/id_rsa_kpler
+Host *github.com
+        IdentityFile ~/.ssh/id_rsa_kpler
+        IdentitiesOnly yes
+
