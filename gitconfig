@@ -21,6 +21,7 @@
 [alias]
   co = checkout
   st = status 
+
   br = branch
   ci = commit
   cm = commit -m
@@ -70,3 +71,4 @@
 	name = Lino Zenone
 [credential]
 	helper = store
+
