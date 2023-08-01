@@ -67,8 +67,27 @@ export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export BUNDLER_EDITOR=code
+export BUNDLER_EDITOR=code  # TODO: change with pycharm
 export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+
+# PyEnv Stuff
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+# Pyenv setup
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+  eval "$(pyenv init --path)"
+fi
+  
+# CHANGE BY DEFAULT AUTO COMPLETION KEY
+bindkey '²' autosuggest-accept
+
+
+

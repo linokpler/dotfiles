@@ -23,6 +23,7 @@
   st = status 
   br = branch
   ci = commit
+  cm = commit -m
   fo = fetch origin
   d = !git --no-pager diff
   dt  = difftool
@@ -67,3 +68,5 @@
 [user]
 	email = lzenone@kpler.com
 	name = Lino Zenone
+[credential]
+	helper = store
