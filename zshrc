@@ -87,7 +87,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
   
 # CHANGE BY DEFAULT AUTO COMPLETION KEY
-bindkey '²' autosuggest-accept
+bindkey '^[[Z' autosuggest-accept
 
 
 
