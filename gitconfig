@@ -69,4 +69,6 @@
 	email = lzenone@kpler.com
 	name = Lino Zenone
 [credential]
+
 	helper = store
+
