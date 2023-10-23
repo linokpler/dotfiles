@@ -196,6 +196,7 @@ type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-
 
 
 
+
 export BUNDLER_EDITOR=code  # TODO: change with pycharm
 export EDITOR=code
 
@@ -217,7 +218,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv virtualenv-init -)"
   eval "$(pyenv init --path)"
 fi
-
 # Tensorflow: 0 = all messages are logged (default behavior), 1 = INFO messages are not printed, 2 = INFO and WARNING messages are not printed, 3 = INFO, WARNING, and ERROR messages are not printed
 export TF_CPP_MIN_LOG_LEVEL=2
 
