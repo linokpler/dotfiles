@@ -143,15 +143,13 @@ ZSH_THEME="dst"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-
 # Useful oh-my-zsh plugins and autocompletions
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src # zsh-completion plugin has to be installed manually for performance purpose
 plugins=(git gitfast last-working-dir common-aliases history-substring-search z zsh-autosuggestions direnv) # poetry
 
+
 # Start the ssh-agent in the background
 # eval "$(ssh-agent -s)"
-
 
 
 # Useful oh-my-zsh plugins and autocompletions
@@ -197,16 +195,15 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv version-name)]'
 
 
+
 export BUNDLER_EDITOR=code  # TODO: change with pycharm
 export EDITOR=code
 
 # PYTHON PATHS (bad practice, keep this tidy)
 export PYTHONPATH=/home/lino/power-workflow/:$PYTHONPATH
 
-
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
-
 
 
 # PyEnv Stuff
@@ -220,12 +217,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv virtualenv-init -)"
   eval "$(pyenv init --path)"
 fi
-  
-# CHANGE BY DEFAULT AUTO COMPLETION KEY
-bindkey '^[[Z' autosuggest-accept
-
-
-
 
 # Tensorflow: 0 = all messages are logged (default behavior), 1 = INFO messages are not printed, 2 = INFO and WARNING messages are not printed, 3 = INFO, WARNING, and ERROR messages are not printed
 export TF_CPP_MIN_LOG_LEVEL=2
@@ -260,4 +251,3 @@ if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/op
 
 # For poetry & other locally installed on lino@dev-cacl1
 export PATH=~/.local/bin:$PATH
-
