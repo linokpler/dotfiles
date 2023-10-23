@@ -194,8 +194,12 @@ export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv version-name)]'
 
+
+
+
 export BUNDLER_EDITOR=code  # TODO: change with pycharm
 export EDITOR=code
+
 # PYTHON PATHS (bad practice, keep this tidy)
 export PYTHONPATH=/home/lino/power-workflow/:$PYTHONPATH
 
@@ -214,13 +218,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv virtualenv-init -)"
   eval "$(pyenv init --path)"
 fi
-  
-# CHANGE BY DEFAULT AUTO COMPLETION KEY
-bindkey '²' autosuggest-accept
-
-
-
-=======
 # Tensorflow: 0 = all messages are logged (default behavior), 1 = INFO messages are not printed, 2 = INFO and WARNING messages are not printed, 3 = INFO, WARNING, and ERROR messages are not printed
 export TF_CPP_MIN_LOG_LEVEL=2
 

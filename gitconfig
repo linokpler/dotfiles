@@ -16,12 +16,11 @@
 
 [core]
   pager = less -FRSX
-  editor = code --wait
+	editor = nano
 
 [alias]
   co = checkout
   st = status 
-
   br = branch
   ci = commit
   cm = commit -m
@@ -57,7 +56,8 @@
 
 [push]
   default = simple
-
+[pull]
+  ff = yes
 [branch "main"]
   mergeoptions = --no-edit
 
@@ -70,5 +70,6 @@
 	email = lzenone@kpler.com
 	name = Lino Zenone
 [credential]
+
 	helper = store
 
