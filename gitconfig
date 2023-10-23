@@ -56,7 +56,8 @@
 
 [push]
   default = simple
-
+[pull]
+  ff = yes
 [branch "main"]
   mergeoptions = --no-edit
 
